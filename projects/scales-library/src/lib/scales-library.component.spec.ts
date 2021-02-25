@@ -8,9 +8,8 @@ describe('ScalesLibraryComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ScalesLibraryComponent ]
-    })
-    .compileComponents();
+      declarations: [ScalesLibraryComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

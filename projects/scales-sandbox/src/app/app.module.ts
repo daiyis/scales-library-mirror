@@ -17,13 +17,7 @@ registerLocaleData(en);
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    ScalesLibraryModule,
-  ],
+  imports: [BrowserModule, FormsModule, HttpClientModule, BrowserAnimationsModule, ScalesLibraryModule],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent],
 })

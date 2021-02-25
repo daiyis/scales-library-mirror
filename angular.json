@@ -32,13 +32,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/scales-library/tsconfig.lib.json",
-              "projects/scales-library/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["projects/scales-library/tsconfig.lib.json", "projects/scales-library/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -72,10 +67,7 @@
                 "output": "/assets/"
               }
             ],
-            "styles": [
-              "projects/scales-sandbox/src/theme.less",
-              "projects/scales-sandbox/src/styles.scss"
-            ],
+            "styles": ["projects/scales-sandbox/src/theme.less", "projects/scales-sandbox/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -132,13 +124,8 @@
             "polyfills": "projects/scales-sandbox/src/polyfills.ts",
             "tsConfig": "projects/scales-sandbox/tsconfig.spec.json",
             "karmaConfig": "projects/scales-sandbox/karma.conf.js",
-            "assets": [
-              "projects/scales-sandbox/src/favicon.ico",
-              "projects/scales-sandbox/src/assets"
-            ],
-            "styles": [
-              "projects/scales-sandbox/src/styles.scss"
-            ],
+            "assets": ["projects/scales-sandbox/src/favicon.ico", "projects/scales-sandbox/src/assets"],
+            "styles": ["projects/scales-sandbox/src/styles.scss"],
             "scripts": []
           }
         },
@@ -150,9 +137,7 @@
               "projects/scales-sandbox/tsconfig.spec.json",
               "projects/scales-sandbox/e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {

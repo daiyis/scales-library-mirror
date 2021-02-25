@@ -1,11 +1,4 @@
-import {
-  Component,
-  Input,
-  Output,
-  OnInit,
-  EventEmitter,
-  OnDestroy,
-} from '@angular/core';
+import { Component, Input, Output, OnInit, EventEmitter, OnDestroy } from '@angular/core';
 import { ReplaySubject, Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged, takeUntil } from 'rxjs/operators';
 
@@ -28,11 +21,7 @@ export class SearchComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.searchTextChanged$
-      .pipe(
-        takeUntil(this.destroyed$),
-        debounceTime(this.debounceTime),
-        distinctUntilChanged()
-      )
+      .pipe(takeUntil(this.destroyed$), debounceTime(this.debounceTime), distinctUntilChanged())
       .subscribe((searchText) => {
         if (!this.searchCancelled) {
           this.search.next(searchText);

@@ -8,13 +8,7 @@ import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [ScalesLibraryComponent, SearchComponent],
-  imports: [
-    NgZorroAntdModule,
-    BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-  ],
+  imports: [NgZorroAntdModule, BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule],
   exports: [ScalesLibraryComponent, SearchComponent, NgZorroAntdModule],
 })
 export class ScalesLibraryModule {}
