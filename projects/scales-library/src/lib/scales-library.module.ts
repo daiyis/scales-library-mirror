@@ -4,9 +4,10 @@ import { ScalesLibraryComponent } from './scales-library.component';
 import { NgZorroAntdModule } from './nz-zorro.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
-  declarations: [ScalesLibraryComponent],
+  declarations: [ScalesLibraryComponent, SearchComponent],
   imports: [
     NgZorroAntdModule,
     BrowserModule,
@@ -14,6 +15,6 @@ import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  exports: [ScalesLibraryComponent, NgZorroAntdModule],
+  exports: [ScalesLibraryComponent, SearchComponent, NgZorroAntdModule],
 })
 export class ScalesLibraryModule {}

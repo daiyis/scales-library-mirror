@@ -1,0 +1,15 @@
+<nz-input-group [nzSuffix]="suffixIconSearch">
+  <input
+    nz-input
+    type="text"
+    maxlength="50"
+    [ngModel]="keywords"
+    (ngModelChange)="keywordsChange.emit($event)"
+    (keyup)="onSearch($event)"
+    placeholder="{{ placeholderText }}"
+  />
+</nz-input-group>
+
+<ng-template #suffixIconSearch>
+  <i nz-icon nzType="search"></i>
+</ng-template>
