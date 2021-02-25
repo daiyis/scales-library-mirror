@@ -1,0 +1,174 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "scales-library": {
+      "projectType": "library",
+      "root": "projects/scales-library",
+      "sourceRoot": "projects/scales-library/src",
+      "prefix": "sc",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/scales-library/tsconfig.lib.json",
+            "project": "projects/scales-library/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/scales-library/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/scales-library/src/test.ts",
+            "tsConfig": "projects/scales-library/tsconfig.spec.json",
+            "karmaConfig": "projects/scales-library/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/scales-library/tsconfig.lib.json",
+              "projects/scales-library/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "scales-sandbox": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/scales-sandbox",
+      "sourceRoot": "projects/scales-sandbox/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/scales-sandbox",
+            "index": "projects/scales-sandbox/src/index.html",
+            "main": "projects/scales-sandbox/src/main.ts",
+            "polyfills": "projects/scales-sandbox/src/polyfills.ts",
+            "tsConfig": "projects/scales-sandbox/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/scales-sandbox/src/favicon.ico",
+              "projects/scales-sandbox/src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
+                "output": "/assets/"
+              }
+            ],
+            "styles": [
+              "projects/scales-sandbox/src/theme.less",
+              "projects/scales-sandbox/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/scales-sandbox/src/environments/environment.ts",
+                  "with": "projects/scales-sandbox/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "scales-sandbox:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "scales-sandbox:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "scales-sandbox:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/scales-sandbox/src/test.ts",
+            "polyfills": "projects/scales-sandbox/src/polyfills.ts",
+            "tsConfig": "projects/scales-sandbox/tsconfig.spec.json",
+            "karmaConfig": "projects/scales-sandbox/karma.conf.js",
+            "assets": [
+              "projects/scales-sandbox/src/favicon.ico",
+              "projects/scales-sandbox/src/assets"
+            ],
+            "styles": [
+              "projects/scales-sandbox/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/scales-sandbox/tsconfig.app.json",
+              "projects/scales-sandbox/tsconfig.spec.json",
+              "projects/scales-sandbox/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/scales-sandbox/e2e/protractor.conf.js",
+            "devServerTarget": "scales-sandbox:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "scales-sandbox:serve:production"
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "scales-library"
+}
