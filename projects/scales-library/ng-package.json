@@ -3,6 +3,7 @@
   "dest": "../../dist/scales-library",
   "assets": [
     "CHANGELOG.md",
+    "src/lib/styles/_tokens.scss",
     "src/lib/**/*.less",
     "src/scales-theme.less"
   ],
