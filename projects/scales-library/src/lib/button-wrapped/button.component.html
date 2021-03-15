@@ -1,1 +1,13 @@
+<!-- option 1: pass parameter -->
+<!-- problems: many passed-in, html attribute(blur, focus, keyup...etc), reactive form -->
 <button nz-button [nzType]="scType" [nzDanger]="scDanger">{{ text }}</button>
+
+<!-- option 2: use ng-content -->
+<!-- avoid some issues, but has no difference with using nz-button directly -->
+<!-- use it like below:
+    <sc-button>
+      <button nz-button nzType="primary">new Button</button>
+    </sc-button>
+    can add certain benifits in some cases
+-->
+<ng-content></ng-content>

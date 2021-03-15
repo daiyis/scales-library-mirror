@@ -1,15 +1,11 @@
 // Buttons
 @btn-font-weight: 600;
-@btn-border-radius-base: @border-radius-sm;
-@btn-border-radius-sm: @border-radius-sm;
-@btn-text-color: @grey-70;
 @btn-primary-color: @text-color-inverse;
-@btn-default-color: @btn-text-color;
 @btn-danger-color: @text-color-inverse;
-@btn-disable-border: transparent; //@border-color-base;
+@btn-disable-border: transparent;
 
 @btn-padding-horizontal-base: @padding-sm;
-@btn-text-hover-bg: @grey-20; //rgba(0, 0, 0, 0.018);
+@btn-text-hover-bg: @grey-20;
 
 // -------------------------------------------------------------
 // mixins
@@ -41,12 +37,12 @@
 
 // text button style
 .btn-text() {
-  .button-variant-other(@btn-text-color, transparent, transparent);
+  .button-variant-other(@btn-default-color, transparent, transparent);
 
   &:hover,
   &:focus,
   &:active {
-    .button-color(@btn-text-color; @grey-20; transparent);
+    .button-color(@btn-default-color; @grey-20; transparent);
   }
 }
 
