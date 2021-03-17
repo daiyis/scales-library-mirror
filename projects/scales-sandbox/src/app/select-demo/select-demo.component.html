@@ -10,6 +10,10 @@
   <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
 </nz-select>
 <nz-select ngModel="lucy" nzAllowClear nzPlaceHolder="Choose">
+  <nz-option-group nzLabel="Manager">
+    <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+    <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+  </nz-option-group>
   <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
 </nz-select>
 
@@ -24,3 +28,42 @@
   <nz-option *ngFor="let item of listOfOption" [nzLabel]="item" [nzValue]="item"></nz-option>
 </nz-select>
 <ng-template #tagPlaceHolder let-selectedList> and {{ selectedList.length }} more selected </ng-template>
+
+<div>
+  <nz-select nzAllowClear nzPlaceHolder="Select OS" [nzCustomTemplate]="defaultTemplate">
+    <nz-option nzCustomContent nzLabel="Windows" nzValue="windows" [nzDisabled]="true"
+      ><i nz-icon nzType="windows"></i> Windows</nz-option
+    >
+    <nz-option nzCustomContent nzLabel="Mac" nzValue="mac"><i nz-icon nzType="apple"></i> Mac</nz-option>
+    <nz-option nzCustomContent nzLabel="Android" nzValue="android"><i nz-icon nzType="android"></i> Android </nz-option>
+  </nz-select>
+  <ng-template #defaultTemplate let-selected>
+    <i nz-icon [nzType]="selected.nzValue"></i> {{ selected.nzLabel }}
+  </ng-template>
+</div>
+<div><nz-date-picker [(ngModel)]="date"></nz-date-picker> <br /></div>
+<div><nz-time-picker [(ngModel)]="time" [nzDefaultOpenValue]="defaultOpenValue"></nz-time-picker></div>
+<div>
+  <nz-table #basicTable [nzData]="listOfData">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Address</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of basicTable.data">
+        <td>{{ data.name }}</td>
+        <td>{{ data.age }}</td>
+        <td>{{ data.address }}</td>
+        <td>
+          <a>Action 一 {{ data.name }}</a>
+          <nz-divider nzType="vertical"></nz-divider>
+          <a>Delete</a>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>
+</div>

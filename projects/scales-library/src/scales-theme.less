@@ -5,6 +5,7 @@
 @import '../src/lib/button/theme.less';
 @import '../src/lib/input/theme.less';
 @import '../src/lib/tag/theme.less';
+@import '../src/lib/table/theme.less';
 
 // -------- JA Scales base color tokens -----------
 @grey-0: #ffffff;
@@ -131,65 +132,6 @@
 @item-active-bg: @primary-1;
 @item-hover-bg: #f5f5f5;
 
-// // Buttons
-// @btn-font-weight: 600;
-// @btn-border-radius-base: @border-radius-sm;
-// @btn-border-radius-sm: @border-radius-sm;
-// @btn-border-width: @border-width-base;
-// @btn-border-style: @border-style-base;
-// @btn-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
-// @btn-primary-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
-// @btn-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
-// @btn-text-color: @grey-70;
-
-// @btn-primary-color: @text-color-inverse;
-// @btn-primary-bg: @primary-color;
-
-// @btn-default-color: @btn-text-color;
-// @btn-default-bg: @component-background;
-// @btn-default-border: @border-color-base;
-
-// @btn-danger-color: @text-color-inverse;
-// @btn-danger-bg: @error-color;
-// @btn-danger-border: @error-color;
-
-// @btn-disable-color: @disabled-color;
-// @btn-disable-bg: @disabled-bg;
-// @btn-disable-border: transparent; //@border-color-base;
-
-// @btn-default-ghost-color: @component-background;
-// @btn-default-ghost-bg: transparent;
-// @btn-default-ghost-border: @component-background;
-
-// @btn-font-size-lg: @font-size-lg;
-// @btn-font-size-sm: @font-size-base;
-
-// @btn-padding-horizontal-base: @padding-sm;
-// @btn-padding-horizontal-lg: @btn-padding-horizontal-base;
-// @btn-padding-horizontal-sm: @padding-xs - 1px;
-
-// @btn-height-base: @height-base;
-// @btn-height-lg: @height-lg;
-// @btn-height-sm: @height-sm;
-
-// @btn-line-height: @line-height-base;
-
-// @btn-circle-size: @btn-height-base;
-// @btn-circle-size-lg: @btn-height-lg;
-// @btn-circle-size-sm: @btn-height-sm;
-
-// @btn-square-size: @btn-height-base;
-// @btn-square-size-lg: @btn-height-lg;
-// @btn-square-size-sm: @btn-height-sm;
-// @btn-square-only-icon-size: @font-size-base + 2px;
-// @btn-square-only-icon-size-sm: @font-size-base;
-// @btn-square-only-icon-size-lg: @btn-font-size-lg + 2px;
-
-// @btn-group-border: @primary-5;
-
-// @btn-link-hover-bg: transparent;
-// @btn-text-hover-bg: @grey-20; //rgba(0, 0, 0, 0.018);
-
 // start from styles.less
 
 @theme: default;
@@ -264,8 +206,10 @@
 @outline-color: @primary-color;
 @outline-fade: 20%;
 
+// Background
 @background-color-light: hsv(0, 0, 98%); // background of header and selected item
-@background-color-base: hsv(0, 0, 96%); // Default grey background color
+// @background-color-base: hsv(0, 0, 96%); // Default grey background color
+@background-color-base: @grey-20; // Default grey background color
 
 // Disabled states
 @disabled-color: @grey-40; //fade(#000, 25%);
@@ -638,43 +582,43 @@
 
 // Table
 // --
-@table-bg: @component-background;
-@table-header-bg: @background-color-light;
-@table-header-color: @heading-color;
-@table-header-sort-bg: @background-color-base;
-@table-body-sort-bg: #fafafa;
-@table-row-hover-bg: @background-color-light;
-@table-selected-row-color: inherit;
-@table-selected-row-bg: @primary-1;
-@table-body-selected-sort-bg: @table-selected-row-bg;
-@table-selected-row-hover-bg: darken(@table-selected-row-bg, 2%);
-@table-expanded-row-bg: #fbfbfb;
-@table-padding-vertical: 16px;
-@table-padding-horizontal: 16px;
-@table-padding-vertical-md: @table-padding-vertical * 3 / 4;
-@table-padding-horizontal-md: @table-padding-horizontal / 2;
-@table-padding-vertical-sm: @table-padding-vertical / 2;
-@table-padding-horizontal-sm: @table-padding-horizontal / 2;
-@table-border-radius-base: @border-radius-base;
-@table-footer-bg: @background-color-light;
-@table-footer-color: @heading-color;
-@table-header-bg-sm: @table-header-bg;
-@table-font-size: @font-size-base;
-@table-font-size-md: @table-font-size;
-@table-font-size-sm: @table-font-size;
-// Sorter
-// Legacy: `table-header-sort-active-bg` is used for hover not real active
-@table-header-sort-active-bg: darken(@table-header-bg, 3%);
-// Filter
-@table-header-filter-active-bg: darken(@table-header-sort-active-bg, 5%);
-@table-filter-btns-bg: inherit;
-@table-filter-dropdown-bg: @component-background;
-@table-expand-icon-bg: @component-background;
-@table-selection-column-width: 60px;
-@table-selection-extra-right: 0;
-// Sticky
-@table-sticky-scroll-bar-bg: fade(#000, 35%);
-@table-sticky-scroll-bar-radius: 4px;
+// @table-bg: @component-background;
+// @table-header-bg: @background-color-light;
+// @table-header-color: @heading-color;
+// @table-header-sort-bg: @background-color-base;
+// @table-body-sort-bg: #fafafa;
+// @table-row-hover-bg: @background-color-light;
+// @table-selected-row-color: inherit;
+// @table-selected-row-bg: @primary-1;
+// @table-body-selected-sort-bg: @table-selected-row-bg;
+// @table-selected-row-hover-bg: darken(@table-selected-row-bg, 2%);
+// @table-expanded-row-bg: #fbfbfb;
+// @table-padding-vertical: 16px;
+// @table-padding-horizontal: 16px;
+// @table-padding-vertical-md: @table-padding-vertical * 3 / 4;
+// @table-padding-horizontal-md: @table-padding-horizontal / 2;
+// @table-padding-vertical-sm: @table-padding-vertical / 2;
+// @table-padding-horizontal-sm: @table-padding-horizontal / 2;
+// @table-border-radius-base: @border-radius-base;
+// @table-footer-bg: @background-color-light;
+// @table-footer-color: @heading-color;
+// @table-header-bg-sm: @table-header-bg;
+// @table-font-size: @font-size-base;
+// @table-font-size-md: @table-font-size;
+// @table-font-size-sm: @table-font-size;
+// // Sorter
+// // Legacy: `table-header-sort-active-bg` is used for hover not real active
+// @table-header-sort-active-bg: darken(@table-header-bg, 3%);
+// // Filter
+// @table-header-filter-active-bg: darken(@table-header-sort-active-bg, 5%);
+// @table-filter-btns-bg: inherit;
+// @table-filter-dropdown-bg: @component-background;
+// @table-expand-icon-bg: @component-background;
+// @table-selection-column-width: 60px;
+// @table-selection-extra-right: 0;
+// // Sticky
+// @table-sticky-scroll-bar-bg: fade(#000, 35%);
+// @table-sticky-scroll-bar-radius: 4px;
 
 // Tag
 // --
