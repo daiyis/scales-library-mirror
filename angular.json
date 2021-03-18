@@ -153,6 +153,129 @@
           }
         }
       }
+    },
+    "scales-site": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/scales-site",
+      "sourceRoot": "projects/scales-site/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/scales-site",
+            "index": "projects/scales-site/src/index.html",
+            "main": "projects/scales-site/src/main.ts",
+            "polyfills": "projects/scales-site/src/polyfills.ts",
+            "tsConfig": "projects/scales-site/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/scales-site/src/favicon.ico",
+              "projects/scales-site/src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
+                "output": "/assets/"
+              }
+            ],
+            "styles": ["projects/scales-site/src/theme.less", "projects/scales-site/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/scales-site/src/environments/environment.ts",
+                  "with": "projects/scales-site/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "scales-site:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "scales-site:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "scales-site:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/scales-site/src/test.ts",
+            "polyfills": "projects/scales-site/src/polyfills.ts",
+            "tsConfig": "projects/scales-site/tsconfig.spec.json",
+            "karmaConfig": "projects/scales-site/karma.conf.js",
+            "assets": [
+              "projects/scales-site/src/favicon.ico",
+              "projects/scales-site/src/assets"
+            ],
+            "styles": [
+              "projects/scales-site/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/scales-site/tsconfig.app.json",
+              "projects/scales-site/tsconfig.spec.json",
+              "projects/scales-site/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/scales-site/e2e/protractor.conf.js",
+            "devServerTarget": "scales-site:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "scales-site:serve:production"
+            }
+          }
+        }
+      }
     }
   },
   "defaultProject": "scales-library"
