@@ -1,6 +1,12 @@
-
+.container {
+  display: flex;
+}
 
 .sandbox-container {
   display: flex;
-  margin: auto;
+  flex: 90%;
+  padding: 24px;
+}
+.menu-container {
+  flex: 10%;
 }

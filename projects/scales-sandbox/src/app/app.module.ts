@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SelectDemoComponent } from './select-demo/select-demo.component';
 import { InputDemoComponent } from './input-demo/input-demo.component';
+import { AppRoutingModule } from './app-routing.module';
 
 // import {ScalesLibraryModule} from 'dist/scales-library/scales-library';
 
@@ -26,6 +27,7 @@ registerLocaleData(en);
     HttpClientModule,
     BrowserAnimationsModule,
     ScalesLibraryModule,
+    AppRoutingModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent],
