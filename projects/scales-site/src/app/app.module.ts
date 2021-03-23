@@ -10,9 +10,10 @@ import en from '@angular/common/locales/en';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ComponentTemplateComponent } from './component-template/component-template.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ComponentTemplateComponent],
   imports: [
     BrowserModule,
     FormsModule,
