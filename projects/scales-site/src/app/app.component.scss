@@ -1,6 +1,61 @@
-.grid-container {
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  grid-template-rows: 80px 1fr auto;
-  min-height: 100vh;
+@import 'styles/_tokens.scss';
+
+body{
+  font-smooth: always;
+}
+
+.logo{
+  margin-bottom: 40px;
+}
+
+.sidebar{
+  background: $color-grey-10;
+
+  .ant-layout-sider{
+    border-right: 1px solid $color-background-border-outline;
+    background: $color-grey-10;
+    padding: 40px;
+  }
+}
+
+.sidenav{
+  list-style: none;
+  padding: 0;
+  
+  > li {
+    color: $color-grey-80;
+    font-weight: bold;
+    margin-bottom: 32px;
+    padding: 8px 0;
+    letter-spacing: -0.4px;
+    text-transform: uppercase;
+
+    span{
+      display: block;
+      padding: 8px 0;
+    }
+  }
+
+  ul{
+    list-style: none;
+    padding: 0;
+  }
+    ul > li {
+    text-transform: none;
+    font-weight: 500;
+
+    a {
+      color: $color-grey-60;
+      display: block;
+      padding: 8px 0;
+    }
+
+    a:hover{
+      color: $color-text-action-primary !important;
+    }
+    }
+}
+
+.component-content{
+  background: $color-background-primary;
 }
