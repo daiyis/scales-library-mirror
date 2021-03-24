@@ -1,3 +1,4 @@
+import { ShareModule } from './shared/share.module';
 import { ScalesLibraryModule } from './../../../scales-library/src/lib/scales-library.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -21,6 +22,7 @@ import { ComponentTemplateComponent } from './component-template/component-templ
     HttpClientModule,
     BrowserAnimationsModule,
     ScalesLibraryModule,
+    ShareModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent],
