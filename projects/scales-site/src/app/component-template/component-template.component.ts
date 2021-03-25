@@ -11,5 +11,4 @@ export class ComponentTemplateComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

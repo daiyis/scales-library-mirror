@@ -25,7 +25,6 @@
     }
 }
 
-
 .component-variant:not(:last-of-type){
     margin-bottom: 40px;
 }
@@ -84,6 +83,30 @@
         pre > code {
             display: block;
             word-wrap: normal;
+        }
+    }
+}
+
+// Responsive elements
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .component-container{
+        padding: 16px;
+        padding-top: 40px;
+    }
+
+    .component-usage{
+    
+        .component-example{
+    
+            > * {
+                margin-right: 0;
+                margin-bottom: 16px;
+                width: 100%;
+            }
+
+            > *:last-child{
+                margin-bottom: 0;
+            }
         }
     }
 }

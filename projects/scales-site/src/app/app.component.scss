@@ -5,7 +5,16 @@ body{
 }
 
 .logo{
+  align-items: center;
+  display: flex;
   margin-bottom: 40px;
+}
+
+.addie{
+  border-radius: 50%;
+  height: 48px;
+  margin-right: 16px;
+  width: 48px;
 }
 
 .sidebar{
@@ -56,6 +65,25 @@ body{
     }
 }
 
-.component-content{
+.component-content, .ant-layout.ant-layout-has-sider > .ant-layout, .ant-layout.ant-layout-has-sider > .ant-layout-content{
   background: $color-background-primary;
+  width: 100%;
+}
+
+// Responsive elements
+@media only screen and (max-device-width : 7680px) {
+  .sidebar{
+  
+    .ant-layout-sider{
+      padding: 0;
+    }
+
+    nav{
+      padding: 40px;
+    }
+  }
+
+  .component-content, .ant-layout.ant-layout-has-sider > .ant-layout, .ant-layout.ant-layout-has-sider > .ant-layout-content{
+    width: 100%;
+  }
 }
