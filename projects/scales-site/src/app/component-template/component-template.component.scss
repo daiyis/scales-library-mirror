@@ -48,6 +48,7 @@
 .component-usage{
     border: 1px solid $color-background-border-outline;
     border-radius: $size-border-radius-md;
+    position: relative;
 
     .component-example{
         display: flex;
@@ -64,19 +65,26 @@
     .code-example{
         background: $color-background-secondary;
         box-shadow: 0px -1px 0px #DCE0E8, inset 0px 4px 8px rgba(0, 0, 0, 0.05);
-        padding: 24px;
+        display: block;
+        height: 100%;
+        position: relative;
 
         button{
-            margin-bottom: 16px;
+            display: block;
+            position: absolute;
+            top: 24px;
+            right: 24px;
         }
 
         pre, code {
+            background-color: $color-grey-20;
             font-family: monospace, monospace;
         }
 
         pre{
             font-size: 16px;
             margin-bottom: 0;
+            padding: 24px;
             overflow: auto;
         }
 
