@@ -1,1 +1,17 @@
 @table-header-bg: @grey-0;
+@table-padding-vertical: @padding-sm;
+@table-padding-horizontal: @padding-sm;
+
+.@{table-prefix-cls} {
+  // ============================ Header ============================
+  &-thead {
+    > tr {
+      > th {
+        font-size: @font-size-sm;
+        font-weight: 600;
+        margin-bottom: 4px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
