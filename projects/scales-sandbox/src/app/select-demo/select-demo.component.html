@@ -47,6 +47,7 @@
   <nz-table #basicTable [nzData]="listOfData">
     <thead>
       <tr>
+        <th><label nz-checkbox></label></th>
         <th>Name</th>
         <th>Age</th>
         <th>Address</th>
@@ -55,6 +56,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let data of basicTable.data">
+        <td><label nz-checkbox></label></td>
         <td>{{ data.name }}</td>
         <td>{{ data.age }}</td>
         <td>{{ data.address }}</td>
