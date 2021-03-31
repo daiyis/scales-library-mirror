@@ -13,13 +13,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SelectDemoComponent } from './select-demo/select-demo.component';
 import { InputDemoComponent } from './input-demo/input-demo.component';
 import { AppRoutingModule } from './app-routing.module';
+import { TableDemoComponent } from './table-demo/table-demo.component';
 
 // import {ScalesLibraryModule} from 'dist/scales-library/scales-library';
 
 registerLocaleData(en);
 
 @NgModule({
-  declarations: [AppComponent, SelectDemoComponent, InputDemoComponent],
+  declarations: [AppComponent, SelectDemoComponent, InputDemoComponent, TableDemoComponent],
   imports: [
     BrowserModule,
     FormsModule,
