@@ -1,3 +1,5 @@
+@import '../../../scales-library/src/lib/styles/tokens';
+
 .playroom {
   font-size: 36px;
   text-align: center;
@@ -6,9 +8,12 @@
 
 .container {
   display: flex;
+  height: 100%;
+  width: 100%;
 }
 
 .sandbox-container {
+  background: $color-grey-20;
   display: flex;
   flex: 90%;
   padding: 24px;

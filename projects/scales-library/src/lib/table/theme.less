@@ -1,6 +1,6 @@
 @table-border-color: @grey-30;
 @table-header-bg: @grey-0;
-@table-padding-vertical: @padding-sm;
+@table-padding-vertical: 0;
 @table-padding-horizontal: @padding-sm;
 
 .@{table-prefix-cls} {
@@ -16,6 +16,7 @@
     > tr {
       > td {
         background: @grey-0;
+        height: 40px;
       }
     }
   }
@@ -27,6 +28,7 @@
         border-bottom: 1px solid @grey-30;
         font-size: @font-size-sm;
         font-weight: 600;
+        height: 40px;
         text-transform: uppercase;
       }
     }

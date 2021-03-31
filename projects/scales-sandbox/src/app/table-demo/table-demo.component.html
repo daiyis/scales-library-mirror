@@ -1,4 +1,77 @@
+<div class="table-container">
+  <h2>JobAdder Scales Table Component</h2>
+  <nz-table nzTemplateMode>
+    <thead>
+      <tr>
+        <th><label nz-checkbox></label></th>
+        <th>Candidate</th>
+        <th>Job Title</th>
+        <th>Email</th>
+        <th>Stage</th>
+        <th>Mobile</th>
+        <th>Location</th>
+        <th>Star Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><label nz-checkbox></label></td>
+        <td><nz-avatar [nzSize]="24" [nzGap]="4" nzText="JS"></nz-avatar>Jon Snow</td>
+        <td>Senior Product Designer</td>
+        <td>jon.snow@winterfell.com</td>
+        <td>Active Interviewing</td>
+        <td>0424839847</td>
+        <td>1 Winterfell Castle, Westeros</td>
+        <td><nz-rate [ngModel]="5"></nz-rate></td>
+      </tr>
+      <tr>
+        <td><label nz-checkbox></label></td>
+        <td><nz-avatar [nzSize]="24" [nzGap]="4" nzText="JL"></nz-avatar>Jaime Lannister</td>
+        <td>Product Designer</td>
+        <td>jamie.lannister@casterlyrock.com</td>
+        <td>Reference Checking</td>
+        <td>0467555662</td>
+        <td>88 Casterly Rock, Westeros</td>
+        <td><nz-rate [ngModel]="3"></nz-rate></td>
+      </tr>
+      <tr>
+        <td><label nz-checkbox></label></td>
+        <td><nz-avatar [nzSize]="24" [nzGap]="4" nzText="DT"></nz-avatar>Daenerys Targaryen</td>
+        <td>Visual UI/UX Designer</td>
+        <td>daenerys.t@dragonstone.com</td>
+        <td>Active Interviewing</td>
+        <td>0489875663</td>
+        <td>128 Dragonstone, Westeros</td>
+        <td><nz-rate [ngModel]="4"></nz-rate></td>
+      </tr>
+      <tr>
+        <td><label nz-checkbox></label></td>
+        <td><nz-avatar [nzSize]="24" [nzGap]="4" nzText="JS"></nz-avatar>Khal Drogo</td>
+        <td>Lead Product Designer</td>
+        <td>khaldrogo@dothra.ki</td>
+        <td>Applied</td>
+        <td>0424839847</td>
+        <td>Vaes Dothrak, Essos</td>
+        <td><nz-rate [ngModel]="3.5"></nz-rate></td>
+      </tr>
+      <tr>
+        <td><label nz-checkbox></label></td>
+        <td><nz-avatar [nzSize]="24" [nzGap]="4" nzText="NK"></nz-avatar>Night King</td>
+        <td>UX Researcher</td>
+        <td>nightking@whitewalker.com</td>
+        <td>Applied</td>
+        <td>+6149289380</td>
+        <td>???, Westeros</td>
+        <td><nz-rate [ngModel]="4.5"></nz-rate></td>
+      </tr>
+    </tbody>
+  </nz-table>
+</div>
+
+<nz-divider></nz-divider>
+
 <div>
+  <h2>Sample Table</h2>
   <nz-table #basicTable [nzData]="listOfData">
     <thead>
       <tr>
