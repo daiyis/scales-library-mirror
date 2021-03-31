@@ -1,15 +1,32 @@
+@table-border-color: @grey-30;
 @table-header-bg: @grey-0;
 @table-padding-vertical: @padding-sm;
 @table-padding-horizontal: @padding-sm;
 
 .@{table-prefix-cls} {
+  background: transparent;
+  &-tbody:before {
+    content: '@';
+    display: block;
+    line-height: 3px;
+    text-indent: -99999px;
+  }
+
+  &-tbody {
+    > tr {
+      > td {
+        background: @grey-0;
+      }
+    }
+  }
+
   // ============================ Header ============================
   &-thead {
     > tr {
       > th {
+        border-bottom: 1px solid @grey-30;
         font-size: @font-size-sm;
         font-weight: 600;
-        margin-bottom: 4px;
         text-transform: uppercase;
       }
     }

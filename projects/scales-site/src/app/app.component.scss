@@ -7,14 +7,14 @@ body{
 .logo{
   align-items: center;
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: $size-margin-2-xl;
 }
 
 .addie{
   border-radius: 50%;
-  height: 48px;
-  margin-right: 16px;
-  width: 48px;
+  height: $size-lg*2;
+  margin-right: $size-margin-md;
+  width: $size-lg*2;
 }
 
 .sidebar{
@@ -23,7 +23,7 @@ body{
   .ant-layout-sider{
     border-right: 1px solid $color-background-border-outline;
     background: $color-grey-10;
-    padding: 40px;
+    padding: $size-padding-2-xl;
   }
 }
 
@@ -34,14 +34,14 @@ body{
   > li {
     color: $color-grey-80;
     font-weight: bold;
-    margin-bottom: 32px;
-    padding: 8px 0;
+    margin-bottom: $size-margin-xl;
+    padding: $size-padding-xs 0;
     letter-spacing: -0.4px;
     text-transform: uppercase;
 
     span{
       display: block;
-      padding: 8px 0;
+      padding: $size-padding-xs 0;
     }
   }
 
@@ -51,12 +51,12 @@ body{
   }
     ul > li {
     text-transform: none;
-    font-weight: 500;
+    font-weight: $font-weight-medium;
 
     a {
       color: $color-grey-60;
       display: block;
-      padding: 8px 0;
+      padding: $size-padding-xs 0;
     }
 
     a:hover{
@@ -71,7 +71,7 @@ body{
 }
 
 // Responsive elements
-@media only screen and (max-device-width : 7680px) {
+@media only screen and (max-device-width : 768px) {
   .sidebar{
   
     .ant-layout-sider{
@@ -79,7 +79,7 @@ body{
     }
 
     nav{
-      padding: 40px;
+      padding: $size-padding-2-xl;
     }
   }
 
