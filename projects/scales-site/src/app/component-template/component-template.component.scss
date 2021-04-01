@@ -64,21 +64,35 @@
 
     .code-example{
         background: $color-background-secondary;
+        border-radius: 0 0 8px 8px;
         box-shadow: 0px -1px 0px #DCE0E8, inset 0px 4px 8px rgba(0, 0, 0, 0.05);
         display: block;
-        height: 100%;
+        height: 140px;
         position: relative;
+        overflow: hidden;
 
-        button{
+        .copy-code{
             display: block;
             position: absolute;
             top: $size-lg;
             right: $size-lg;
         }
 
+        .show-more{
+            background: rgb(240,241,245);
+            background: linear-gradient(180deg, rgba(240, 241, 245, 0) -30%, rgba(240, 241, 245, 0.8) 30%, rgba(240, 241, 245, 1) 80%);
+            //border-radius: 0 0 4px 4px;
+            bottom: -1px;
+            border: none;
+            height: 48px;
+            position: absolute;
+            width: 100%;
+        }
+
         pre, code {
             background-color: $color-grey-20;
             font-family: monospace, monospace;
+            height: 100%;
         }
 
         pre{
