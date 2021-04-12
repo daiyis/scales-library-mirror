@@ -6,6 +6,7 @@ JobAdder design system based on ng-zorro
 
 1. scales-library: the main scales design system library project. it contain all the components and custom themes.
 2. scales-sandbox: sanbox project for the scales library, a playroom for checking and paly with the components.
+3. scales-site: document site project for the scales library.
 
 ## Quick Start
 
@@ -15,13 +16,16 @@ JobAdder design system based on ng-zorro
 2. Configure the Angular CLI to use yarn as opposed to npm with the following command `ng config -g cli.packageManager yarn`
 
 
-Start developing
+Install dependencies
+```
+yarn install
+```
+
+Start developing with project
 
 ```
-yarn start
+ng serve project-name: ng serve scales-site
 ```
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
