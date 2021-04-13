@@ -1,0 +1,75 @@
+<div>
+  <h2>Drawer Header</h2>
+
+  <div class="record-container flex">
+    <div class="record-tag candidate">
+      <i class="record-icon" nz-icon nzType="trophy" [nzTheme]="'fill'"></i>
+      <h3>Record Type</h3>
+    </div>
+    <header class="record-header-container">
+      <div class="record-header flex">
+        <nz-avatar [nzSize]="88" nzIcon="user" nzSrc="https://i.imgur.com/kcPMLNS.jpg"></nz-avatar>
+        <div class="information">
+          <div class="flex record-title">
+            <h1 nz-checkbox>Tatyana Ali</h1>
+            <div class="fullscreen-close flex">
+              <p>ID: 58050747</p>
+              <button nz-button nzType="text"><i nz-icon nzType="fullscreen"></i></button>
+              <button nz-button nzType="text"><i nz-icon nzType="close"></i></button>
+            </div>
+          </div>
+          <div class="tags flex">
+            <a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu" class="tag success">
+              Actively Looking <i nz-icon nzType="down"></i>
+            </a>
+            <nz-dropdown-menu #menu="nzDropdownMenu">
+              <ul nz-menu nzSelectable>
+                <li nz-menu-item>1st menu item</li>
+                <li nz-menu-item>2nd menu item</li>
+                <li nz-menu-item>3rd menu item</li>
+                <li nz-menu-item nzDanger>4th danger item</li>
+              </ul>
+            </nz-dropdown-menu>
+            <div class="tag neutral">Last Placed <span>12/07/2017</span></div>
+          </div>
+          <div class="flex action-buttons">
+            <div class="flex main-actions">
+              <div class="group-actions">
+                <button nz-button nzType="text"><i nz-icon nzType="mail" [nzTheme]="'fill'"></i></button>
+                <button nz-button nzType="text"><i nz-icon nzType="phone" [nzTheme]="'fill'"></i></button>
+                <button nz-button nzType="text"><i nz-icon nzType="message" [nzTheme]="'fill'"></i></button>
+                <button nz-button nzType="text"><i nz-icon nzType="pushpin" [nzTheme]="'fill'"></i></button>
+              </div>
+
+              <button nzTrigger="click" nz-dropdown [nzDropdownMenu]="menu" nz-button nzType="default">
+                Actions <i nz-icon nzType="down"></i>
+              </button>
+              <nz-dropdown-menu #menu="nzDropdownMenu">
+                <ul nz-menu nzSelectable>
+                  <li nz-menu-item>1st menu item</li>
+                  <li nz-menu-item>2nd menu item</li>
+                  <li nz-menu-item>3rd menu item</li>
+                  <li nz-menu-item nzDanger>4th danger item</li>
+                </ul>
+              </nz-dropdown-menu>
+            </div>
+            <div class="actions nav-buttons">
+              <button nz-button nzType="default"><i nz-icon nzType="left"></i></button>
+              <button nz-button nzType="default"><i nz-icon nzType="right"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nz-tabset id="record-navigation-tab">
+        <nz-tab nzTitle="Details"></nz-tab>
+        <nz-tab nzTitle="Activity"></nz-tab>
+        <nz-tab nzTitle="Documents"></nz-tab>
+        <nz-tab nzTitle="Resume"></nz-tab>
+        <nz-tab nzTitle="Applications"></nz-tab>
+        <nz-tab nzTitle="Placements"></nz-tab>
+        <nz-tab nzTitle="Submissions"></nz-tab>
+        <nz-tab nzTitle="Availability"></nz-tab>
+      </nz-tabset>
+    </header>
+  </div>
+</div>

@@ -7,6 +7,7 @@
         <th>Candidate</th>
         <th>Job Title</th>
         <th>Email</th>
+        <th>Status</th>
         <th>Stage</th>
         <th>Mobile</th>
         <th>Location</th>
@@ -19,6 +20,13 @@
         <td><nz-avatar [nzSize]="24" [nzGap]="4" nzText="JS"></nz-avatar>Jon Snow</td>
         <td>Senior Product Designer</td>
         <td>jon.snow@winterfell.com</td>
+        <td>
+          <nz-select ngModel="active">
+            <nz-option nzValue="active" nzLabel="Actively Looking"></nz-option>
+            <nz-option nzValue="notavailable" nzLabel="Not Available"></nz-option>
+            <nz-option nzValue="disabled" nzLabel="Disabled" nzDisabled></nz-option>
+          </nz-select>
+        </td>
         <td>Active Interviewing</td>
         <td>0424839847</td>
         <td>1 Winterfell Castle, Westeros</td>
@@ -29,6 +37,13 @@
         <td><nz-avatar [nzSize]="24" [nzGap]="4" nzText="JL"></nz-avatar>Jaime Lannister</td>
         <td>Product Designer</td>
         <td>jamie.lannister@casterlyrock.com</td>
+        <td>
+          <nz-select ngModel="active">
+            <nz-option nzValue="active" nzLabel="Actively Looking"></nz-option>
+            <nz-option nzValue="notavailable" nzLabel="Not Available"></nz-option>
+            <nz-option nzValue="disabled" nzLabel="Disabled" nzDisabled></nz-option>
+          </nz-select>
+        </td>
         <td>Reference Checking</td>
         <td>0467555662</td>
         <td>88 Casterly Rock, Westeros</td>
@@ -39,6 +54,13 @@
         <td><nz-avatar [nzSize]="24" [nzGap]="4" nzText="DT"></nz-avatar>Daenerys Targaryen</td>
         <td>Visual UI/UX Designer</td>
         <td>daenerys.t@dragonstone.com</td>
+        <td>
+          <nz-select ngModel="active">
+            <nz-option nzValue="active" nzLabel="Actively Looking"></nz-option>
+            <nz-option nzValue="notavailable" nzLabel="Not Available"></nz-option>
+            <nz-option nzValue="disabled" nzLabel="Disabled" nzDisabled></nz-option>
+          </nz-select>
+        </td>
         <td>Active Interviewing</td>
         <td>0489875663</td>
         <td>128 Dragonstone, Westeros</td>
@@ -49,6 +71,13 @@
         <td><nz-avatar [nzSize]="24" [nzGap]="4" nzText="JS"></nz-avatar>Khal Drogo</td>
         <td>Lead Product Designer</td>
         <td>khaldrogo@dothra.ki</td>
+        <td>
+          <nz-select ngModel="active">
+            <nz-option nzValue="active" nzLabel="Actively Looking"></nz-option>
+            <nz-option nzValue="notavailable" nzLabel="Not Available"></nz-option>
+            <nz-option nzValue="disabled" nzLabel="Disabled" nzDisabled></nz-option>
+          </nz-select>
+        </td>
         <td>Applied</td>
         <td>0424839847</td>
         <td>Vaes Dothrak, Essos</td>
@@ -59,6 +88,13 @@
         <td><nz-avatar [nzSize]="24" [nzGap]="4" nzText="NK"></nz-avatar>Night King</td>
         <td>UX Researcher</td>
         <td>nightking@whitewalker.com</td>
+        <td>
+          <nz-select ngModel="active">
+            <nz-option nzValue="active" nzLabel="Actively Looking"></nz-option>
+            <nz-option nzValue="notavailable" nzLabel="Not Available"></nz-option>
+            <nz-option nzValue="disabled" nzLabel="Disabled" nzDisabled></nz-option>
+          </nz-select>
+        </td>
         <td>Applied</td>
         <td>+6149289380</td>
         <td>???, Westeros</td>

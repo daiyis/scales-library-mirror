@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { SelectDemoComponent } from './select-demo/select-demo.component';
 import { TableDemoComponent } from './table-demo/table-demo.component';
+import { DrawerHeaderDemoComponent } from './drawer-header-demo/drawer-header-demo.component';
 
 const routes: Routes = [
   // { path: '', component: AppComponent },
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path: 'table',
     component: TableDemoComponent,
+  },
+  {
+    path: 'drawer-header',
+    component: DrawerHeaderDemoComponent,
   },
   // {
   //   path: 'candidate',

@@ -14,13 +14,14 @@ import { SelectDemoComponent } from './select-demo/select-demo.component';
 import { InputDemoComponent } from './input-demo/input-demo.component';
 import { AppRoutingModule } from './app-routing.module';
 import { TableDemoComponent } from './table-demo/table-demo.component';
+import { DrawerHeaderDemoComponent } from './drawer-header-demo/drawer-header-demo.component';
 
 // import {ScalesLibraryModule} from 'dist/scales-library/scales-library';
 
 registerLocaleData(en);
 
 @NgModule({
-  declarations: [AppComponent, SelectDemoComponent, InputDemoComponent, TableDemoComponent],
+  declarations: [AppComponent, SelectDemoComponent, InputDemoComponent, TableDemoComponent, DrawerHeaderDemoComponent],
   imports: [
     BrowserModule,
     FormsModule,

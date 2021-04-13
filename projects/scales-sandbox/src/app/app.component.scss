@@ -16,7 +16,8 @@
   background: $color-grey-20;
   display: flex;
   flex: 90%;
-  padding: 24px;
+  min-height: 1000px;
+  padding: $size-padding-lg;
 }
 .menu-container {
   flex: 10%;

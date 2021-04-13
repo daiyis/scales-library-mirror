@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../../scales-library/src/lib/styles/tokens';
+
+app-table-demo, app-drawer-header-demo{
+  width: 100%;
+}
+
+// Tabs
+#record-navigation-tab{
+  margin-left: 24px;
+  .ant-tabs-nav{
+    margin-bottom: 0;
+  }
+}
