@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "5094ce16-8b52-47c9-a353-cdce4a60aab7"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -22,12 +25,7 @@
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/scales-library/src/test.ts",
-            "tsConfig": "projects/scales-library/tsconfig.spec.json",
-            "karmaConfig": "projects/scales-library/karma.conf.js"
-          }
+          "builder": "@angular-builders/jest:run"
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
