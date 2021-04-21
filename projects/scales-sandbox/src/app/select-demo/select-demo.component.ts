@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-
-
 @Component({
   selector: 'app-select-demo',
   templateUrl: './select-demo.component.html',
@@ -14,6 +12,9 @@ export class SelectDemoComponent implements OnInit {
   time: Date | null = null;
   defaultOpenValue = new Date(0, 0, 0, 0, 0, 0);
 
+  switchValue = false;
+  disabled = false;
+  value1 = 30;
 
   ngOnInit(): void {
     const children: string[] = [];

@@ -44,3 +44,8 @@
 <div><nz-date-picker [(ngModel)]="date"></nz-date-picker> <br /></div>
 <div><nz-time-picker [(ngModel)]="time" [nzDefaultOpenValue]="defaultOpenValue"></nz-time-picker></div>
 
+<div>
+  <nz-switch [(ngModel)]="switchValue"></nz-switch>
+  <nz-slider [(ngModel)]="value1" [nzDisabled]="disabled"></nz-slider>
+  <button nz-button nzTooltipTitle="prompt text" nzTooltipPlacement="topLeft" nz-tooltip>Align edge / 边缘对齐</button>
+</div>
