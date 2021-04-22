@@ -12,10 +12,6 @@ export class SelectDemoComponent implements OnInit {
   time: Date | null = null;
   defaultOpenValue = new Date(0, 0, 0, 0, 0, 0);
 
-  switchValue = false;
-  disabled = false;
-  value1 = 30;
-
   ngOnInit(): void {
     const children: string[] = [];
     for (let i = 10; i < 36; i++) {

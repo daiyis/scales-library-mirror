@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SelectDemoComponent } from './select-demo/select-demo.component';
 import { TableDemoComponent } from './table-demo/table-demo.component';
 import { DrawerHeaderDemoComponent } from './drawer-header-demo/drawer-header-demo.component';
+import { SwitchDemoComponent } from './switch-demo/switch-demo.component';
 
 const routes: Routes = [
   // { path: '', component: AppComponent },
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path: 'drawer-header',
     component: DrawerHeaderDemoComponent,
+  },
+  {
+    path: 'switch',
+    component: SwitchDemoComponent,
   },
   // {
   //   path: 'candidate',
