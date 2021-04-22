@@ -3,14 +3,17 @@
   <nz-table nzTemplateMode>
     <thead>
       <tr>
-        <th><label nz-checkbox></label></th>
-        <th>Candidate</th>
-        <th>Job Title</th>
+        <th nzWidth="24px"><label nz-checkbox></label></th>
+        <th nzCustomFilter [nzSortFn]="true">Candidate 
+          <nz-filter-trigger>
+          <i nz-icon nzType="search"></i>
+        </nz-filter-trigger></th>
+        <th [nzSortFn]="true">Job Title</th>
         <th>Email</th>
-        <th>Status</th>
-        <th>Stage</th>
+        <th [nzSortFn]="true">Status</th>
+        <th [nzSortFn]="true">Stage</th>
         <th>Mobile</th>
-        <th>Location</th>
+        <th [nzSortFn]="true">Location</th>
         <th>Star Rating</th>
       </tr>
     </thead>
@@ -111,7 +114,7 @@
   <nz-table #basicTable [nzData]="listOfData">
     <thead>
       <tr>
-        <th><label nz-checkbox></label></th>
+        <th nzWidth="24px"><label nz-checkbox></label></th>
         <th>Name</th>
         <th>Age</th>
         <th>Address</th>
