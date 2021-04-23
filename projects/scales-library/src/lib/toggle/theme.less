@@ -3,10 +3,6 @@
     min-width: 32px;
     height: 8px;
 
-    &-checked {
-      background-color: #cacfdb;
-    }
-
     &-handle {
       position: absolute;
       top: -4px;
@@ -21,57 +17,31 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background-color: #1971c2;
-        border-radius: 9px;
+        background-color: @primary-color;
+        border-radius: 50%;
         box-shadow: 0 2px 4px 0 rgb(0 35 11 / 20%);
         transition: all 0.2s ease-in-out;
         content: '';
       }
     }
 
-    &-checked &-handle {
-      left: calc(100% - 16px) !important;
+    &-checked {
+      background-color: @grey-40;
+
+      .@{switch-prefix-cls}-handle {
+        left: calc(100% - 16px);
+      }
     }
   }
 
-  // .ant-switch-checked {
-  //   background-color: #cacfdb;
-  // }
-
-  // .ant-switch-handle {
-  //   position: absolute;
-  //   top: -4px;
-  //   left: 0px;
-  //   width: 16px;
-  //   height: 16px;
-  //   transition: all 0.2s ease-in-out;
-
-  //   &::before {
-  //     position: absolute;
-  //     top: 0;
-  //     right: 0;
-  //     bottom: 0;
-  //     left: 0;
-  //     background-color: #1971c2;
-  //     border-radius: 9px;
-  //     box-shadow: 0 2px 4px 0 rgb(0 35 11 / 20%);
-  //     transition: all 0.2s ease-in-out;
-  //     content: '';
-  //   }
-  // }
-
-  .ant-switch-checked .ant-switch-handle {
-    left: calc(100% - 16px);
-  }
-
   &:not(&-disabled):active {
-    .ant-switch-handle::before {
+    .@{switch-prefix-cls}-handle::before {
       right: 0;
       left: 0;
     }
 
-    &.ant-switch-checked {
-      .ant-switch-handle::before {
+    &.@{switch-prefix-cls}-checked {
+      .@{switch-prefix-cls}-handle::before {
         right: 0;
         left: 0%;
       }
