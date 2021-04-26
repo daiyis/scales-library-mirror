@@ -1,4 +1,4 @@
-import { Component, Input, Output, OnInit, EventEmitter, OnDestroy } from '@angular/core';
+import { Component, Input, Output, OnInit, EventEmitter, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 import { ReplaySubject, Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged, takeUntil } from 'rxjs/operators';
 
@@ -6,6 +6,7 @@ import { debounceTime, distinctUntilChanged, takeUntil } from 'rxjs/operators';
   selector: 'sc-search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SearchComponent implements OnInit, OnDestroy {
   @Input() keywords = '';

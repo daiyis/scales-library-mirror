@@ -1,0 +1,42 @@
+<div class="record-container flex">
+  <div class="record-tag {{ recordType }}">
+    <i class="record-icon" nz-icon [nzType]="recordIconType" [nzTheme]="'fill'"></i>
+    <h3>{{ recordType }}</h3>
+  </div>
+  <header class="record-header-container">
+    <div class="record-header flex">
+      <nz-avatar [nzSize]="88" nzIcon="user" [nzSrc]="avatarSrc"></nz-avatar>
+      <div class="information">
+        <div class="flex record-title">
+          <h1 nz-checkbox>{{ title }}</h1>
+          <div class="fullscreen-close flex">
+            <p>{{ id }}</p>
+            <button nz-button nzType="text"><i nz-icon nzType="fullscreen"></i></button>
+            <button nz-button nzType="text"><i nz-icon nzType="close"></i></button>
+          </div>
+        </div>
+        <div class="tags flex">
+          <ng-container *ngTemplateOutlet="infoLineTemplate"> </ng-container>
+        </div>
+        <div class="flex action-buttons">
+          <div class="flex main-actions">
+            <div class="group-actions">
+              <ng-container *ngTemplateOutlet="quickActionsTemplate"> </ng-container>
+            </div>
+            <button nzTrigger="click" nz-dropdown [nzDropdownMenu]="menu" nz-button nzType="default">
+              Actions <i nz-icon nzType="down"></i>
+            </button>
+            <nz-dropdown-menu #menu="nzDropdownMenu">
+              <ng-container *ngTemplateOutlet="actionMenuTemplate"> </ng-container>
+            </nz-dropdown-menu>
+          </div>
+          <div class="actions nav-buttons">
+            <button nz-button nzType="default"><i nz-icon nzType="left"></i></button>
+            <button nz-button nzType="default"><i nz-icon nzType="right"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ng-container *ngTemplateOutlet="tabMenuTemplate"> </ng-container>
+  </header>
+</div>

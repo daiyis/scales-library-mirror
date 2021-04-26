@@ -1,64 +1,44 @@
 <div>
   <h2>Drawer Header</h2>
 
-  <div class="record-container flex">
-    <div class="record-tag job">
-      <i class="record-icon" nz-icon nzType="fire" [nzTheme]="'fill'"></i>
-      <h3>Jobs</h3>
-    </div>
-    <header class="record-header-container">
-      <div class="record-header flex">
-        <nz-avatar [nzSize]="88" nzIcon="user" nzSrc="https://pbs.twimg.com/profile_images/1337607516008501250/6Ggc4S5n_400x400.png"></nz-avatar>
-        <div class="information">
-          <div class="flex record-title">
-            <h1 nz-checkbox>Tesla</h1>
-            <div class="fullscreen-close flex">
-              <p>ID: 58050747</p>
-              <button nz-button nzType="text"><i nz-icon nzType="fullscreen"></i></button>
-              <button nz-button nzType="text"><i nz-icon nzType="close"></i></button>
-            </div>
-          </div>
-          <div class="tags flex">
-            <a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu" class="tag neutral">
-              Searching <i nz-icon nzType="down"></i>
-            </a>
-            <nz-dropdown-menu #menu="nzDropdownMenu">
-              <ul nz-menu nzSelectable>
-                <li nz-menu-item>1st menu item</li>
-                <li nz-menu-item>2nd menu item</li>
-                <li nz-menu-item>3rd menu item</li>
-                <li nz-menu-item nzDanger>4th danger item</li>
-              </ul>
-            </nz-dropdown-menu>
-            <div class="tag">Offer</div>
-          </div>
-          <div class="flex action-buttons">
-            <div class="flex main-actions">
-              <div class="group-actions">
-                <button nz-button nzType="text"><i nz-icon nzType="bank" [nzTheme]="'fill'"></i></button>
-                <button nz-button nzType="text"><i nz-icon nzType="pushpin" [nzTheme]="'fill'"></i></button>
-                <button nz-button nzType="text"><i nz-icon nzType="idcard" [nzTheme]="'fill'"></i></button>
-              </div>
-
-              <button nzTrigger="click" nz-dropdown [nzDropdownMenu]="menu" nz-button nzType="default">
-                Actions <i nz-icon nzType="down"></i>
-              </button>
-              <nz-dropdown-menu #menu="nzDropdownMenu">
-                <ul nz-menu nzSelectable>
-                  <li nz-menu-item>1st menu item</li>
-                  <li nz-menu-item>2nd menu item</li>
-                  <li nz-menu-item>3rd menu item</li>
-                  <li nz-menu-item nzDanger>4th danger item</li>
-                </ul>
-              </nz-dropdown-menu>
-            </div>
-            <div class="actions nav-buttons">
-              <button nz-button nzType="default"><i nz-icon nzType="left"></i></button>
-              <button nz-button nzType="default"><i nz-icon nzType="right"></i></button>
-            </div>
-          </div>
-        </div>
+  <sc-drawer-header
+    recordType="job"
+    recordIconType="fire"
+    avatarSrc="https://pbs.twimg.com/profile_images/1337607516008501250/6Ggc4S5n_400x400.png"
+    title="Tesla"
+    id="ID: 58050747"
+  >
+    <ng-template #infoLine>
+      <a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu" class="tag neutral">
+        Searching <i nz-icon nzType="down"></i>
+      </a>
+      <nz-dropdown-menu #menu="nzDropdownMenu">
+        <ul nz-menu nzSelectable>
+          <li nz-menu-item>1st menu item</li>
+          <li nz-menu-item>2nd menu item</li>
+          <li nz-menu-item>3rd menu item</li>
+          <li nz-menu-item nzDanger>4th danger item</li>
+        </ul>
+      </nz-dropdown-menu>
+      <div class="tag">Offer</div>
+    </ng-template>
+    <ng-template #quickActions>
+      <div class="quick-actions">
+        <button nz-button nzType="text"><i nz-icon nzType="mail" [nzTheme]="'fill'"></i></button>
+        <button nz-button nzType="text"><i nz-icon nzType="phone" [nzTheme]="'fill'"></i></button>
+        <button nz-button nzType="text"><i nz-icon nzType="message" [nzTheme]="'fill'"></i></button>
+        <button nz-button nzType="text"><i nz-icon nzType="pushpin" [nzTheme]="'fill'"></i></button>
       </div>
+    </ng-template>
+    <ng-template #actionMenu>
+      <ul nz-menu nzSelectable>
+        <li nz-menu-item>1st menu item</li>
+        <li nz-menu-item>2nd menu item</li>
+        <li nz-menu-item>3rd menu item</li>
+        <li nz-menu-item nzDanger>4th danger item</li>
+      </ul>
+    </ng-template>
+    <ng-template #tabMenu>
       <nz-tabset id="record-navigation-tab">
         <nz-tab nzTitle="Details"></nz-tab>
         <nz-tab nzTitle="Activities (17)"></nz-tab>
@@ -69,139 +49,97 @@
         <nz-tab nzTitle="Placements"></nz-tab>
         <nz-tab nzTitle="Assessments"></nz-tab>
       </nz-tabset>
-    </header>
-  </div>
+    </ng-template>
+  </sc-drawer-header>
 
-  <div class="record-container flex">
-    <div class="record-tag contact">
-      <i class="record-icon" nz-icon nzType="idcard" [nzTheme]="'fill'"></i>
-      <h3>Contact</h3>
-    </div>
-    <header class="record-header-container">
-      <div class="record-header flex">
-        <nz-avatar [nzSize]="88" nzIcon="user" nzSrc="https://cdn.vox-cdn.com/uploads/chorus_image/image/46094226/Jon_snow.0.jpg"></nz-avatar>
-        <div class="information">
-          <div class="flex record-title">
-            <h1 nz-checkbox>Jon Snow</h1>
-            <div class="fullscreen-close flex">
-              <p>ID: 58050747</p>
-              <button nz-button nzType="text"><i nz-icon nzType="fullscreen"></i></button>
-              <button nz-button nzType="text"><i nz-icon nzType="close"></i></button>
-            </div>
-          </div>
-          <div class="tags flex">
-            <a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu" class="tag">
-              Active Contact <i nz-icon nzType="down"></i>
-            </a>
-            <nz-dropdown-menu #menu="nzDropdownMenu">
-              <ul nz-menu nzSelectable>
-                <li nz-menu-item>1st menu item</li>
-                <li nz-menu-item>2nd menu item</li>
-                <li nz-menu-item>3rd menu item</li>
-                <li nz-menu-item nzDanger>4th danger item</li>
-              </ul>
-            </nz-dropdown-menu>
-            <div class="tag neutral">Last Placed <span>12/07/2017</span></div>
-          </div>
-          <div class="flex action-buttons">
-            <div class="flex main-actions">
-              <div class="group-actions">
-                <button nz-button nzType="text"><i nz-icon nzType="mail" [nzTheme]="'fill'"></i></button>
-                <button nz-button nzType="text"><i nz-icon nzType="phone" [nzTheme]="'fill'"></i></button>
-                <button nz-button nzType="text"><i nz-icon nzType="message" [nzTheme]="'fill'"></i></button>
-                <button nz-button nzType="text"><i nz-icon nzType="pushpin" [nzTheme]="'fill'"></i></button>
-              </div>
-
-              <button nzTrigger="click" nz-dropdown [nzDropdownMenu]="menu" nz-button nzType="default">
-                Actions <i nz-icon nzType="down"></i>
-              </button>
-              <nz-dropdown-menu #menu="nzDropdownMenu">
-                <ul nz-menu nzSelectable>
-                  <li nz-menu-item>1st menu item</li>
-                  <li nz-menu-item>2nd menu item</li>
-                  <li nz-menu-item>3rd menu item</li>
-                  <li nz-menu-item nzDanger>4th danger item</li>
-                </ul>
-              </nz-dropdown-menu>
-            </div>
-            <div class="actions nav-buttons">
-              <button nz-button nzType="default"><i nz-icon nzType="left"></i></button>
-              <button nz-button nzType="default"><i nz-icon nzType="right"></i></button>
-            </div>
-          </div>
-        </div>
+  <sc-drawer-header
+    recordType="contact"
+    recordIconType="idcard"
+    avatarSrc="https://cdn.vox-cdn.com/uploads/chorus_image/image/46094226/Jon_snow.0.jpg"
+    title="John Snow"
+    id="ID: 58050747"
+  >
+    <ng-template #infoLine>
+      <a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu" class="tag">
+        Active Contact <i nz-icon nzType="down"></i>
+      </a>
+      <nz-dropdown-menu #menu="nzDropdownMenu">
+        <ul nz-menu nzSelectable>
+          <li nz-menu-item>1st menu item</li>
+          <li nz-menu-item>2nd menu item</li>
+          <li nz-menu-item>3rd menu item</li>
+          <li nz-menu-item nzDanger>4th danger item</li>
+        </ul>
+      </nz-dropdown-menu>
+      <div class="tag neutral">Last Placed <span>12/07/2017</span></div>
+    </ng-template>
+    <ng-template #quickActions>
+      <div class="quick-actions">
+        <button nz-button nzType="text"><i nz-icon nzType="mail" [nzTheme]="'fill'"></i></button>
+        <button nz-button nzType="text"><i nz-icon nzType="phone" [nzTheme]="'fill'"></i></button>
+        <button nz-button nzType="text"><i nz-icon nzType="message" [nzTheme]="'fill'"></i></button>
+        <button nz-button nzType="text"><i nz-icon nzType="pushpin" [nzTheme]="'fill'"></i></button>
       </div>
+    </ng-template>
+    <ng-template #actionMenu>
+      <ul nz-menu nzSelectable>
+        <li nz-menu-item>1st menu item</li>
+        <li nz-menu-item>2nd menu item</li>
+        <li nz-menu-item>3rd menu item</li>
+        <li nz-menu-item nzDanger>4th danger item</li>
+      </ul>
+    </ng-template>
+    <ng-template #tabMenu>
       <nz-tabset id="record-navigation-tab">
-          <nz-tab nzTitle="Details"></nz-tab>
-          <nz-tab nzTitle="Activities (12)"></nz-tab>
-          <nz-tab nzTitle="Jobs (8)"></nz-tab>
-          <nz-tab nzTitle="Documents (4)"></nz-tab>
+        <nz-tab nzTitle="Details"></nz-tab>
+        <nz-tab nzTitle="Activities (12)"></nz-tab>
+        <nz-tab nzTitle="Jobs (8)"></nz-tab>
+        <nz-tab nzTitle="Documents (4)"></nz-tab>
         <nz-tab nzTitle="Previous Companies"></nz-tab>
         <nz-tab nzTitle="Submissions (3)"></nz-tab>
         <nz-tab nzTitle="Placements (1)"></nz-tab>
       </nz-tabset>
-    </header>
-  </div>
+    </ng-template>
+  </sc-drawer-header>
 
-  <div class="record-container flex">
-    <div class="record-tag company">
-      <i class="record-icon" nz-icon nzType="bank" [nzTheme]="'fill'"></i>
-      <h3>Company</h3>
-    </div>
-    <header class="record-header-container">
-      <div class="record-header flex">
-        <nz-avatar [nzSize]="88" nzIcon="user" nzSrc="https://pbs.twimg.com/profile_images/1280236709825835008/HmeYTwai_400x400.png"></nz-avatar>
-        <div class="information">
-          <div class="flex record-title">
-            <h1 nz-checkbox>Stripe</h1>
-            <div class="fullscreen-close flex">
-              <p>ID: 58050747</p>
-              <button nz-button nzType="text"><i nz-icon nzType="fullscreen"></i></button>
-              <button nz-button nzType="text"><i nz-icon nzType="close"></i></button>
-            </div>
-          </div>
-          <div class="tags flex">
-            <a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu" class="tag">
-              Internal Client <i nz-icon nzType="down"></i>
-            </a>
-            <nz-dropdown-menu #menu="nzDropdownMenu">
-              <ul nz-menu nzSelectable>
-                <li nz-menu-item>1st menu item</li>
-                <li nz-menu-item>2nd menu item</li>
-                <li nz-menu-item>3rd menu item</li>
-                <li nz-menu-item nzDanger>4th danger item</li>
-              </ul>
-            </nz-dropdown-menu>
-            <div class="tag neutral">Last Placed <span>12/07/2017</span></div>
-          </div>
-          <div class="flex action-buttons">
-            <div class="flex main-actions">
-              <div class="group-actions">
-                <button nz-button nzType="text"><i nz-icon nzType="mail" [nzTheme]="'fill'"></i></button>
-                <button nz-button nzType="text"><i nz-icon nzType="phone" [nzTheme]="'fill'"></i></button>
-                <button nz-button nzType="text"><i nz-icon nzType="idcard" [nzTheme]="'fill'"></i></button>
-                <button nz-button nzType="text"><i nz-icon nzType="pushpin" [nzTheme]="'fill'"></i></button>
-              </div>
-
-              <button nzTrigger="click" nz-dropdown [nzDropdownMenu]="menu" nz-button nzType="default">
-                Actions <i nz-icon nzType="down"></i>
-              </button>
-              <nz-dropdown-menu #menu="nzDropdownMenu">
-                <ul nz-menu nzSelectable>
-                  <li nz-menu-item>1st menu item</li>
-                  <li nz-menu-item>2nd menu item</li>
-                  <li nz-menu-item>3rd menu item</li>
-                  <li nz-menu-item nzDanger>4th danger item</li>
-                </ul>
-              </nz-dropdown-menu>
-            </div>
-            <div class="actions nav-buttons">
-              <button nz-button nzType="default"><i nz-icon nzType="left"></i></button>
-              <button nz-button nzType="default"><i nz-icon nzType="right"></i></button>
-            </div>
-          </div>
-        </div>
+  <sc-drawer-header
+    recordType="company"
+    recordIconType="bank"
+    avatarSrc="https://pbs.twimg.com/profile_images/1280236709825835008/HmeYTwai_400x400.png"
+    title="Stripe"
+    id="ID: 58050747"
+  >
+    <ng-template #infoLine>
+      <a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu" class="tag">
+        Internal Client <i nz-icon nzType="down"></i>
+      </a>
+      <nz-dropdown-menu #menu="nzDropdownMenu">
+        <ul nz-menu nzSelectable>
+          <li nz-menu-item>1st menu item</li>
+          <li nz-menu-item>2nd menu item</li>
+          <li nz-menu-item>3rd menu item</li>
+          <li nz-menu-item nzDanger>4th danger item</li>
+        </ul>
+      </nz-dropdown-menu>
+      <div class="tag neutral">Last Placed <span>12/07/2017</span></div>
+    </ng-template>
+    <ng-template #quickActions>
+      <div class="quick-actions">
+        <button nz-button nzType="text"><i nz-icon nzType="mail" [nzTheme]="'fill'"></i></button>
+        <button nz-button nzType="text"><i nz-icon nzType="phone" [nzTheme]="'fill'"></i></button>
+        <button nz-button nzType="text"><i nz-icon nzType="message" [nzTheme]="'fill'"></i></button>
+        <button nz-button nzType="text"><i nz-icon nzType="pushpin" [nzTheme]="'fill'"></i></button>
       </div>
+    </ng-template>
+    <ng-template #actionMenu>
+      <ul nz-menu nzSelectable>
+        <li nz-menu-item>1st menu item</li>
+        <li nz-menu-item>2nd menu item</li>
+        <li nz-menu-item>3rd menu item</li>
+        <li nz-menu-item nzDanger>4th danger item</li>
+      </ul>
+    </ng-template>
+    <ng-template #tabMenu>
       <nz-tabset id="record-navigation-tab">
         <nz-tab nzTitle="Details"></nz-tab>
         <nz-tab nzTitle="Activities (47)"></nz-tab>
@@ -211,68 +149,47 @@
         <nz-tab nzTitle="Placements (4)"></nz-tab>
         <nz-tab nzTitle="Documents (3)"></nz-tab>
       </nz-tabset>
-    </header>
-  </div>
+    </ng-template>
+  </sc-drawer-header>
 
-  <div class="record-container flex">
-    <div class="record-tag candidate">
-      <i class="record-icon" nz-icon nzType="trophy" [nzTheme]="'fill'"></i>
-      <h3>Candidate</h3>
-    </div>
-    <header class="record-header-container">
-      <div class="record-header flex">
-        <nz-avatar [nzSize]="88" nzIcon="user" nzSrc="https://i.imgur.com/kcPMLNS.jpg"></nz-avatar>
-        <div class="information">
-          <div class="flex record-title">
-            <h1 nz-checkbox>Tatyana Ali</h1>
-            <div class="fullscreen-close flex">
-              <p>ID: 58050747</p>
-              <button nz-button nzType="text"><i nz-icon nzType="fullscreen"></i></button>
-              <button nz-button nzType="text"><i nz-icon nzType="close"></i></button>
-            </div>
-          </div>
-          <div class="tags flex">
-            <a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu" class="tag">
-              Actively Looking <i nz-icon nzType="down"></i>
-            </a>
-            <nz-dropdown-menu #menu="nzDropdownMenu">
-              <ul nz-menu nzSelectable>
-                <li nz-menu-item>1st menu item</li>
-                <li nz-menu-item>2nd menu item</li>
-                <li nz-menu-item>3rd menu item</li>
-                <li nz-menu-item nzDanger>4th danger item</li>
-              </ul>
-            </nz-dropdown-menu>
-            <div class="tag neutral">Last Placed <span>12/07/2017</span></div>
-          </div>
-          <div class="flex action-buttons">
-            <div class="flex main-actions">
-              <div class="group-actions">
-                <button nz-button nzType="text"><i nz-icon nzType="mail" [nzTheme]="'fill'"></i></button>
-                <button nz-button nzType="text"><i nz-icon nzType="phone" [nzTheme]="'fill'"></i></button>
-                <button nz-button nzType="text"><i nz-icon nzType="message" [nzTheme]="'fill'"></i></button>
-                <button nz-button nzType="text"><i nz-icon nzType="pushpin" [nzTheme]="'fill'"></i></button>
-              </div>
-
-              <button nzTrigger="click" nz-dropdown [nzDropdownMenu]="menu" nz-button nzType="default">
-                Actions <i nz-icon nzType="down"></i>
-              </button>
-              <nz-dropdown-menu #menu="nzDropdownMenu">
-                <ul nz-menu nzSelectable>
-                  <li nz-menu-item>1st menu item</li>
-                  <li nz-menu-item>2nd menu item</li>
-                  <li nz-menu-item>3rd menu item</li>
-                  <li nz-menu-item nzDanger>4th danger item</li>
-                </ul>
-              </nz-dropdown-menu>
-            </div>
-            <div class="actions nav-buttons">
-              <button nz-button nzType="default"><i nz-icon nzType="left"></i></button>
-              <button nz-button nzType="default"><i nz-icon nzType="right"></i></button>
-            </div>
-          </div>
-        </div>
+  <sc-drawer-header
+    recordType="candidate"
+    recordIconType="trophy"
+    avatarSrc="https://i.imgur.com/kcPMLNS.jpg"
+    title="Tatyana Ali"
+    id="ID: 58050747"
+  >
+    <ng-template #infoLine>
+      <a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu" class="tag">
+        Actively Looking <i nz-icon nzType="down"></i>
+      </a>
+      <nz-dropdown-menu #menu="nzDropdownMenu">
+        <ul nz-menu nzSelectable>
+          <li nz-menu-item>1st menu item</li>
+          <li nz-menu-item>2nd menu item</li>
+          <li nz-menu-item>3rd menu item</li>
+          <li nz-menu-item nzDanger>4th danger item</li>
+        </ul>
+      </nz-dropdown-menu>
+      <div class="tag neutral">Last Placed <span>12/07/2017</span></div>
+    </ng-template>
+    <ng-template #quickActions>
+      <div class="quick-actions">
+        <button nz-button nzType="text"><i nz-icon nzType="mail" [nzTheme]="'fill'"></i></button>
+        <button nz-button nzType="text"><i nz-icon nzType="phone" [nzTheme]="'fill'"></i></button>
+        <button nz-button nzType="text"><i nz-icon nzType="message" [nzTheme]="'fill'"></i></button>
+        <button nz-button nzType="text"><i nz-icon nzType="pushpin" [nzTheme]="'fill'"></i></button>
       </div>
+    </ng-template>
+    <ng-template #actionMenu>
+      <ul nz-menu nzSelectable>
+        <li nz-menu-item>1st menu item</li>
+        <li nz-menu-item>2nd menu item</li>
+        <li nz-menu-item>3rd menu item</li>
+        <li nz-menu-item nzDanger>4th danger item</li>
+      </ul>
+    </ng-template>
+    <ng-template #tabMenu>
       <nz-tabset id="record-navigation-tab">
         <nz-tab nzTitle="Details"></nz-tab>
         <nz-tab nzTitle="Activities (23)"></nz-tab>
@@ -283,6 +200,6 @@
         <nz-tab nzTitle="Submissions (3)"></nz-tab>
         <nz-tab nzTitle="Availability"></nz-tab>
       </nz-tabset>
-    </header>
-  </div>
+    </ng-template>
+  </sc-drawer-header>
 </div>

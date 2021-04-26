@@ -21,139 +21,16 @@
   }
 }
 
-// Drawer Header
 
-.flex {
-  display: flex;
-}
+.quick-actions {
+  display: inline-block;
 
-.record-container{
-    margin-bottom: 40px;
-}
-
-.record-tag {
-  background: $color-grey-50;
-  border-radius: 8px 0 0 8px;
-  box-shadow: inset -4px 0px 8px rgba(34, 43, 61, 0.15);
-  cursor: pointer;
-  min-height: 100%;
-  padding: 16px 0;
-
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-
-  .record-icon {
-    color: $color-grey-0;
-    display: block;
-    font-size: 16px;
-    text-align: center;
-  }
-
-  h3 {
-    color: $color-grey-0;
-    font-size: $font-text-xs;
-    font-weight: $font-weight-medium;
-    margin-top: $size-margin-xs;
-    margin-block-start: $size-margin-xs - 1;
-    margin-block-end: $size-margin-xs - 1;
-    text-orientation: mixed;
-    text-transform: uppercase;
-    transform: rotate(180deg);
-
-    writing-mode: vertical-lr;
-    -webkit-text-orientation: mixed;
-  }
-
-  &.candidate {
-    background: $color-mint-60;
-
-    h3 {
-      content: 'Candidate';
-    }
-  }
-
-  &.job {
-    background: $color-blue-70;
-  }
-
-  &.contact {
-    background: $color-orange-60;
-  }
-
-  &.company {
-    background: $color-pink-60;
-  }
-
-  &.placement {
-    background: $color-teal-60;
+  button[nzType='text'] {
+    color: $color-grey-50;
+    margin-right: $size-margin-xs;
   }
 }
 
-.record-header-container {
-  background: $color-grey-0;
-  flex-grow: 2;
-}
-
-.record-header {
-  padding: $size-padding-md $size-padding-md $size-padding-md $size-padding-lg;
-
-  nz-avatar {
-    margin-right: $size-margin-md;
-  }
-
-  .information {
-    flex-grow: 2;
-
-    .record-title {
-      justify-content: space-between;
-    }
-
-    h1 {
-      font-size: $font-text-xl;
-      margin-bottom: $size-margin-xs;
-    }
-
-    .fullscreen-close {
-      justify-content: flex-end;
-
-      p {
-        padding: 4px 0;
-      }
-      > * {
-        margin-left: $size-margin-xs;
-      }
-    }
-
-    .tags {
-      margin-bottom: $size-margin-md;
-    }
-
-    .tag {
-      margin-right: $size-margin-xs;
-    }
-  }
-
-  .action-buttons {
-    justify-content: space-between;
-    button[nzType='text'] {
-      color: $color-grey-50;
-      margin-right: $size-margin-xs;
-    }
-
-    .nav-buttons button {
-      margin-left: $size-margin-xs;
-    }
-  }
-
-  .group-actions::after {
-    content: 'divider';
-    border-right: 1px solid $color-grey-30;
-    display: inline-block;
-    height: 24px;
-    margin-left: $size-margin-xs;
-    margin-right: $size-margin-md;
-    text-indent: -9999px;
-  }
+.tag {
+  margin-right: $size-margin-xs;
 }
