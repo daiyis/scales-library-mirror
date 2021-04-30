@@ -4,6 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start lib": "ng serve scales-library",
+    "start sandbox": "ng serve scales-sandbox",
+    "start site": "ng serve scales-site",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
