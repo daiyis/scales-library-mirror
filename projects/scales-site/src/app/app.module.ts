@@ -12,9 +12,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ComponentTemplateComponent } from './component-template/component-template.component';
+import { ScButtonDocComponent } from './button/sc-button-doc.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ScInputDocComponent } from './input/sc-input-doc.component';
+import { NzDemoButtonBasicComponent } from './input/basic';
 
 @NgModule({
-  declarations: [AppComponent, ComponentTemplateComponent],
+  declarations: [
+    AppComponent,
+    ComponentTemplateComponent,
+    ScButtonDocComponent,
+    ScInputDocComponent,
+    NzDemoButtonBasicComponent,
+  ],
   imports: [
     BrowserModule,
     FormsModule,
@@ -23,6 +33,7 @@ import { ComponentTemplateComponent } from './component-template/component-templ
     BrowserAnimationsModule,
     ScalesLibraryModule,
     ShareModule,
+    AppRoutingModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent],

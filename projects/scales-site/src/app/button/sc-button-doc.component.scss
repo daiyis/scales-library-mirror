@@ -1,0 +1,119 @@
+@import '../styles/tokens';
+
+.ant-layout {
+  background: $color-grey-0;
+}
+
+.component-container {
+  padding: $size-padding-2-xl * 2;
+  padding-top: $size-padding-2-xl;
+}
+
+.description {
+  color: $color-grey-80;
+  h2 {
+    font-size: $font-text-4-xl;
+    font-weight: bold;
+    margin-bottom: $size-margin-lg;
+    line-height: 110%;
+  }
+
+  p {
+    font-size: $font-text-lg;
+    line-height: 150%;
+    margin-bottom: $size-margin-lg;
+  }
+}
+
+.component-variant:not(:last-of-type) {
+  margin-bottom: $size-margin-2-xl;
+}
+
+.component-variant {
+  h3 {
+    font-size: $font-text-xl;
+    font-weight: $font-weight-medium;
+    line-height: 110%;
+    margin-bottom: $size-margin-md;
+  }
+
+  p {
+    color: $color-grey-60;
+    font-size: $font-text-md;
+    line-height: 140%;
+    margin-bottom: $size-margin-md;
+  }
+}
+
+.component-usage {
+  border: 1px solid $color-background-border-outline;
+  border-radius: $size-border-radius-md;
+  position: relative;
+
+  .component-example {
+    display: flex;
+    flex-wrap: wrap;
+    padding: $size-padding-lg;
+    justify-content: flex-start;
+
+    > * {
+      //margin-bottom: 16px;
+      margin-right: $size-margin-md;
+    }
+  }
+
+  .code-example {
+    background: $color-background-secondary;
+    box-shadow: 0px -1px 0px #dce0e8, inset 0px 4px 8px rgba(0, 0, 0, 0.05);
+    display: block;
+    height: 100%;
+    position: relative;
+
+    button {
+      display: block;
+      position: absolute;
+      top: $size-lg;
+      right: $size-lg;
+    }
+
+    pre,
+    code {
+      background-color: $color-grey-20;
+      font-family: monospace, monospace;
+    }
+
+    pre {
+      font-size: $font-text-md;
+      margin-bottom: 0;
+      padding: $size-padding-lg;
+      overflow: auto;
+    }
+
+    pre > code {
+      display: block;
+      word-wrap: normal;
+    }
+  }
+}
+
+// Responsive elements
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .component-container {
+    padding: $size-padding-md;
+    padding-top: $size-padding-2-xl;
+  }
+
+  .component-usage {
+    .component-example {
+      > * {
+        margin-right: 0;
+        margin-bottom: $size-margin-md;
+        width: 100%;
+      }
+
+      > *:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
